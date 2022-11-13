@@ -1,9 +1,13 @@
 import React from "react"
 import {Routes,Route} from 'react-router-dom'
 import { AuthPage } from "./pages/AuthPage"
-import { ExamplePage } from "./pages/ExamplePage"
-import { SomeDataPage } from "./pages/SomeDataPage"
+import { FaqsPage } from "./pages/FaqPage"
+import { AboutPage } from "./pages/AboutPage"
 import { MainPage } from "./pages/MainPage"
+import { BlogPage } from "./pages/BlogPage"
+import { MediaPage } from "./pages/MediaPage"
+import { SizePage } from "./pages/SizePage"
+
 
 export const useRoutes = isAuthenticated =>{
 
@@ -11,11 +15,18 @@ export const useRoutes = isAuthenticated =>{
         return(
             <Routes>
 
-                <Route path = "/" element = { <MainPage/> }    />
+                <Route exact path = "/" element = { <MainPage/> }     />
 
-                <Route path = "data-page" element = {<SomeDataPage/>}/> 
+                <Route exact path = "about-page" element = {<AboutPage/>} /> 
                     
-                <Route path = "example-page" element = {  <ExamplePage/>}  /> 
+                <Route exact path = "faqs-page" element = {  <FaqsPage/>}  /> 
+                
+                <Route exact path = "media-page" element = {  <MediaPage/>}  /> 
+
+                <Route exact path = "size-page" element = {  <SizePage/>}  />
+
+                <Route exact path = "blog-page" element = {  <BlogPage/>}  />  
+
 
 
             </Routes>

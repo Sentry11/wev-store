@@ -6,6 +6,7 @@
 
   .flex-container{
     display: grid;
+   
     grid-template-columns: 1.7fr 8fr ;
   }
   
@@ -134,7 +135,26 @@
             inset -12px 12px 24px #ffffff;
   }
 
+
+    .dropdown-select{
+      margin: auto;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      text-align: center;
+      height: 40px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius:12px;
+      font-family: "MockFlowFont";  
+    
+    }
+
   .filters{
+    // position: fixed;
     width: 100%;
     height: fit-content;
     background-color:rgb(255, 255, 255);
@@ -143,75 +163,130 @@
     text-align: center;
 
     li{
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: center;
         list-style: none;
         text-align:start;
-      
-
+        padding-bottom: 10px;
+        
     }
 
     input[type="checkbox"] {
-        appearance: none;
-        background-color: #fff;
-        margin: 0;
-        font: inherit;
-        color: rgb(13, 13, 13);
-        width: 1.0em;
-        height: 0.5em;
-        border: 0.15em solid rgb(0, 0, 0);
-        border-radius: 0.15em;
-        transform: translateY(-0.075em);
-      }
-      
-      .form-control + .form-control {
-        margin-top: 1em;
-      }
-
-    input[type="checkbox"] {
-        /* ...existing styles */
-        display: grid;
-        place-content: center;
-        
-      }
-      
-      input[type="checkbox"]::before {
-        content: "";
-        width: 0.95em;
-        height: 0.95em;
-        transform: scale(0);
-        transition: 120ms transform ease-in-out;
-        box-shadow: inset 1em 1em var(red);
-      }
-      
-      input[type="checkbox"]:checked::before {
-        transform: scale(1);
-      }
-
-      input[type="checkbox"]::before {
-        /* ...existing styles */
-      
-        /* Windows High Contrast Mode */
-        background-color: red;
-      }
-
-
-  }
-  .filters-name{
-    width: 100%;
-    height: fit-content;
-    background-color:rgb(70, 64, 64);
-    margin-top: 50px;
-    margin-left: 10px;
-    text-align: center;
-  }
-
-  .filter-color{
-    width: 100%;
-    height: fit-content;
-    background-color:rgb(118, 114, 114);
-    margin-top: 50px;
-    margin-left: 10px;
-    text-align: center;
-  }
-
+      display: block;
+      margin: 0;
+      // padding: 0;
+   }
 
   
+
+    
+
+    // input[type="checkbox"] {
+    //     appearance: none;
+    //     background-color: #fff;
+    //     margin: 0;
+    //     font: inherit;
+    //     color: rgb(13, 13, 13);
+    //     width: 1.0em;
+    //     height: 0.5em;
+    //     border: 0.15em solid rgb(0, 0, 0);
+    //     border-radius: 0.15em;
+    //     transform: translateY(-0.075em);
+    //   }
+      
+    //   .form-control + .form-control {
+    //     margin-top: 1em;
+    //   }
+
+    // input[type="checkbox"] {
+    //     /* ...existing styles */
+    //     display: grid;
+    //     place-content: center;
+        
+    //   }
+      
+    //   input[type="checkbox"]::before {
+    //     content: "";
+    //     width: 0.95em;
+    //     height: 0.95em;
+    //     transform: scale(0);
+    //     transition: 120ms transform ease-in-out;
+    //     box-shadow: inset 1em 1em var(red);
+    //   }
+      
+    //   input[type="checkbox"]:checked::before {
+    //     transform: scale(1);
+    //   }
+
+    //   input[type="checkbox"]::before {
+    //     /* ...existing styles */
+      
+    //     /* Windows High Contrast Mode */
+    //     background-color: red;
+    //   }
+
+
+  }
+ 
+
+  
+.filters-size{
+  width: 80%;
+  height: fit-content;
+  background-color:rgb(212, 212, 212);
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+
+  span{
+    font-size: 21px;
+    font-weight:700;
+  }
+
+  .size-button{
+    
+    background-color:white;
+    border-color: #000000;
+    color:#000000;
+    padding: 0;
+    border-radius:0;
+    width: 25%;
+    height: 45px;
+    font-size: 14px;
+    margin:5px;
+  }
+}
+  
+.filter-color{
+  width: 80%;
+  height: fit-content;
+  background-color:rgb(212, 212, 212);
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 8px;
+
+
+  span{
+    font-size: 21px;
+    font-weight:700;
+  }
+
+  .filter-button{
+    background-color:white;
+    border-color: #000000;
+    color:#000000;
+    padding: 0;
+    border-radius:100px;
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+    margin:5px;
+   
+  }
+
+}

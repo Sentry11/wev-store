@@ -1,0 +1,128 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    @media screen and (max-width: 520px) {
+      padding: 0 20px;
+    }
+  }
+  // タイトル
+  h2.page-sttl {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    color: #00b2ff;
+    p {
+      color: #0097d8;
+      font-weight: 900;
+      font-size: 36px;
+      display: block;
+      padding-top: 6px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    h2.page-sttl {
+      font-size: 10px;
+      p {
+        font-size: 28px;
+      }
+    }
+  }
+  // インタビューQ&A
+  .interview {
+    .faq-wrap {
+      margin-top: 60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      // 1番目以外
+      &:not(:first-of-type) {
+        margin-top: 100px;
+      }
+      // 偶数段
+      &:nth-of-type(even) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+      }
+      .photo {
+        width: 44%;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+      // 奇数段の写真の右側にスペース
+      &:nth-of-type(odd) .photo {
+        margin-right: 40px;
+      }
+      // 偶数段の写真の左側にスペース
+      &:nth-of-type(even) .photo {
+        margin-left: 40px;
+      }
+      // Q&A部分
+      .faq-box {
+        text-align: left;
+        width: 44%;
+        .faq-number {
+          font-size: 22px;
+          font-weight: 900;
+          color: #003e58;
+          text-align: center;
+          line-height: 1;
+        }
+      }
+      // 質問
+      .heading-s {
+        color: #006b98;
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 900;
+        margin-top: 20px;
+      }
+      // 答え
+      .faq-answer {
+        color: #00a3e7;
+        margin-top: 24px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+    }
+  }
+  // スマホ
+  @media screen and (max-width: 520px) {
+    .interview {
+      .faq-wrap {
+        display: block;
+        // 偶数段のスペース無くす
+        &:nth-of-type(even) .photo {
+          margin-left: 0;
+        }
+        .photo {
+          width: 100%;
+        }
+        .faq-box {
+          width: 100%;
+          margin-top: 20px;
+          .faq-number {
+            font-size: 18px;
+          }
+          .faq-answer {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
+import { NavLink } from "react-router-dom";
 import "./header.scss"
 
 
@@ -33,12 +34,12 @@ export const Header = () => {
                         </label>
                         <div className="nav-container">
                         <ul className="nav-tabs">
-                          <a href="*" className="nav-tab">Home</a>
-                            <a href="*" className="nav-tab">Products</a>
-                            <a href="*" className="nav-tab">History</a>
-                            <a href="*" className="nav-tab">FAQs</a>
-                            <a href="*" className="nav-tab">Media</a>
-                            <a href="/" className="nav-tab" onClick={logOutHandler}>Logout</a>
+                          <NavLink to="about-page" className="nav-tab">About</NavLink>
+                            <NavLink to = 'faqs-page' className="nav-tab">FAQs</NavLink>
+                            <NavLink to = 'size-page'  className="nav-tab">Size Table</NavLink>
+                            <NavLink to = 'media-page' className="nav-tab">Media</NavLink>
+                            <NavLink to = 'blog-page' className="nav-tab">Blog</NavLink>
+                            <NavLink href="/" className="nav-tab" onClick={logOutHandler}>Logout</NavLink>
                         </ul>
                         </div>
                     </nav>

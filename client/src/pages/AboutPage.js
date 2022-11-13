@@ -1,8 +1,8 @@
 import React from "react";
 import '../index.css'
 
-export const ExamplePage = () => {
+export const AboutPage = () => {
     return(
-        <h1>ExamplePage</h1>
+        <h1>SomeDataPage</h1>
     )
 }
