@@ -1,0 +1,217 @@
+:root {
+    --surface-color: rgb(202, 201, 201);
+    --curve: 60;
+  }
+
+
+  .flex-container{
+    display: grid;
+    grid-template-columns: 1.7fr 8fr ;
+  }
+  
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding:0;
+
+    list-style-type: none;
+  }
+  
+  .card {
+    margin-right: 5px;
+    position: relative;
+    display: block;
+    height: fit-content;  
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__image {      
+    width: 350px;
+    height: auto;
+   
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 28px;
+    margin: 0 0 .1em;
+    color: #000000;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";  
+    font-size: .8em; 
+    color: #000000;  
+  }
+  
+  .card__status {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #ff0000;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    
+
+  .search{
+    margin: auto;
+    margin-top: 15px;
+    width: 60%;
+    height: 40px;
+    display: flex;
+    font-size: 21px;
+    text-align: center;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: inset 12px -12px 24px #dedede,
+            inset -12px 12px 24px #ffffff;
+  }
+
+  .filters{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+
+    li{
+        list-style: none;
+        text-align:start;
+      
+
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        font: inherit;
+        color: rgb(13, 13, 13);
+        width: 1.0em;
+        height: 0.5em;
+        border: 0.15em solid rgb(0, 0, 0);
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+      }
+      
+      .form-control + .form-control {
+        margin-top: 1em;
+      }
+
+    input[type="checkbox"] {
+        /* ...existing styles */
+        display: grid;
+        place-content: center;
+        
+      }
+      
+      input[type="checkbox"]::before {
+        content: "";
+        width: 0.95em;
+        height: 0.95em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(red);
+      }
+      
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+
+      input[type="checkbox"]::before {
+        /* ...existing styles */
+      
+        /* Windows High Contrast Mode */
+        background-color: red;
+      }
+
+
+  }
+  .filters-name{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(70, 64, 64);
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .filter-color{
+    width: 100%;
+    height: fit-content;
+    background-color:rgb(118, 114, 114);
+    margin-top: 50px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+
+  

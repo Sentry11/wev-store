@@ -1,0 +1,5 @@
+{
+    "port":5000,
+    "mongoUri":"mongodb+srv://Sentry11:Lalka428011@cluster0.owala6z.mongodb.net/AUTH?retryWrites=true&w=majority",
+    "jwtSecret":"template jwt key"
+}
