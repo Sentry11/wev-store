@@ -1,11 +1,16 @@
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
     margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
     @media screen and (max-width: 520px) {
       padding: 0 20px;
+      margin-top: 15px;
     }
   }
-  // タイトル
+  
   h2.page-sttl {
     margin-top: 50px;
     text-align: center;
@@ -14,7 +19,7 @@
     font-weight: 700;
     color: #00b2ff;
     p {
-      color: #0097d8;
+      color: #020202;
       font-weight: 900;
       font-size: 36px;
       display: block;
@@ -29,7 +34,7 @@
       }
     }
   }
-  // インタビューQ&A
+  
   .interview {
     .faq-wrap {
       margin-top: 60px;
@@ -44,11 +49,11 @@
       -webkit-box-align: start;
       -ms-flex-align: start;
       align-items: flex-start;
-      // 1番目以外
+      
       &:not(:first-of-type) {
         margin-top: 100px;
       }
-      // 偶数段
+     
       &:nth-of-type(even) {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
@@ -63,49 +68,50 @@
           height: auto;
         }
       }
-      // 奇数段の写真の右側にスペース
+     
       &:nth-of-type(odd) .photo {
         margin-right: 40px;
       }
-      // 偶数段の写真の左側にスペース
+      
       &:nth-of-type(even) .photo {
         margin-left: 40px;
       }
-      // Q&A部分
+      
       .faq-box {
         text-align: left;
         width: 44%;
         .faq-number {
           font-size: 22px;
           font-weight: 900;
-          color: #003e58;
+          color: #000000;
           text-align: center;
           line-height: 1;
         }
       }
-      // 質問
+      
       .heading-s {
-        color: #006b98;
+        color: #ff4406;
         font-size: 18px;
         line-height: 1.3;
         font-weight: 900;
         margin-top: 20px;
       }
-      // 答え
+     
       .faq-answer {
-        color: #00a3e7;
+        color: #000000;
         margin-top: 24px;
         line-height: 1.5;
         font-size: 14px;
+        font-weight: 600;
       }
     }
   }
-  // スマホ
+ 
   @media screen and (max-width: 520px) {
     .interview {
       .faq-wrap {
         display: block;
-        // 偶数段のスペース無くす
+        
         &:nth-of-type(even) .photo {
           margin-left: 0;
         }

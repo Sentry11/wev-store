@@ -79,7 +79,7 @@ export const MainPage = () => {
         <>
           <Header></Header>
           <Card products={ProductArray}/>
-            <h1>MainPage</h1>
+        
           <Footer></Footer>
             
         </>
