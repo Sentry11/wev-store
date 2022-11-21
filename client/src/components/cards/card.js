@@ -10,7 +10,8 @@ export const Card = ({products}) => {
         <input className='search' placeholder='Search '/> 
 
 
-            <select id="select" className='dropdown-select' placeholder='Sort By'> 
+            <select id="select" className='dropdown-select' placeholder='Sort By' defaultValue={"value1"}> 
+
               <option value="value1">Featured</option>
               <option value="value2" selected>Newest</option>
               <option value="value3">High-low price</option>

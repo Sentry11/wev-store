@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+
 
 $auth-font: 'Cinzel', serif;
-
+$content-font: 'Cinzel', serif;
 
 :export {
     authFont: $auth-font;
+    contentFont:$content-font;
 }

@@ -10,6 +10,7 @@ const PORT = config.get('port')  || 5000
 app.use(express.json({ extended:true}))
 app.use(cors())
 app.use('/api/auth', require('./routes/auth.rotes'))
+app.use('/api/data', require('./routes/data.routes'))
 
 
 

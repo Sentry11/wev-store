@@ -1,9 +1,12 @@
 
-import React from "react";
+import React, {useEffect} from "react";
 import { Header } from "../components/header/header";
 import { Footer } from "../components/footer/footer";
 import { Card } from "../components/cards/card";
+import { useHttp } from "../hooks/http.hook";
 import '../index.css'
+
+
 
 const ProductArray = [
   {
@@ -71,6 +74,15 @@ const ProductArray = [
 
 
 export const MainPage = () => {
+
+const {request} = useHttp();
+ 
+ 
+useEffect(() => {
+  const data =  request('/api/data/items')
+            console.log(data.message)
+
+}, [])
 
 
 

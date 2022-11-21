@@ -17,5 +17,4 @@ export const About = () => {
            </Parallax>
         </div>
     )
-
 }
